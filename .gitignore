@@ -1,0 +1,23 @@
+# Exclude virtual environments
+venv/
+__pycache__/
+
+# Exclude environment variable files
+.env
+
+# Exclude macOS system files
+.DS_Store
+
+# Exclude GCP specific files
+.gcloudignore
+
+# Python files
+*.pyc
+*.pyo
+
+
+# Ignore note.txt
+note.txt
+
+# Exclude GCP specific files
+.gcloudignore

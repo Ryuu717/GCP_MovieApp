@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.Title or movie.title }} - Movie Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary mb-4">Back to Home</a>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{{ movie.Poster or 'https://image.tmdb.org/t/p/w500' + movie.poster_path }}" class="img-fluid" alt="{{ movie.Title or movie.title }}">
+            </div>
+            <div class="col-md-8">
+                <h1>{{ movie.Title or movie.title }}</h1>
+                <p><strong>Release Date:</strong> {{ movie.Released or movie.release_date }}</p>
+                <p><strong>Rating:</strong> {{ movie.imdbRating or movie.vote_average }}</p>
+                <p><strong>Plot:</strong> {{ movie.Plot or movie.overview }}</p>
+                <p><strong>Director:</strong> {{ movie.Director or 'N/A' }}</p>
+                <p><strong>Actors:</strong> {{ movie.Actors or 'N/A' }}</p>
+                <p><strong>Genre:</strong> {{ movie.Genre or 'N/A' }}</p>
+                <p><strong>Runtime:</strong> {{ movie.Runtime or movie.runtime ~ ' min' }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

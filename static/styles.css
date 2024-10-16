@@ -1,0 +1,37 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+}
+
+.card-subtitle {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+.alert {
+    font-size: 1.2rem;
+}
