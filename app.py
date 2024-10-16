@@ -106,5 +106,6 @@ def movie_detail(tmdb_id):
     movie_details = get_movie_details_by_tmdb_id(tmdb_id)
     return render_template('movie_detail.html', movie=movie_details)
 
+
 if __name__ == '__main__':
     app.run(debug=True)
