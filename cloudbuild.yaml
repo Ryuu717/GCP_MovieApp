@@ -4,3 +4,6 @@ steps:
 
 # Optionally, specify the timeout or other parameters
 timeout: "1200s"
+
+options:
+  logging: CLOUD_LOGGING_ONLY  # Use Cloud Logging for build logs
